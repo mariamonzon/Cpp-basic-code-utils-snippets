@@ -4,14 +4,12 @@
 
 C++ is a case sensitive language. Case sensitivity means that your keywords and variable declarations must match the case. Aside from the case sensitivity, C++ also has a defined outline for program code and specific "elements" found in a typical C++ application. These elements consist of:
 
-    Preprocessor directives which are used to have the compiler execute tasks prior to compiling the source code
-    using directives which are utilized to indicate which namespaces to include in a source code file
-    a function header which consists of a return type, function name, and parameters
-    a function body containing the code that performs the actions required of that function
-    statements that are contained in the C++ source code file
-    comments for documenting the source code for programmers to understand what the code is intended to do
-    a return statement that sends data back to the function caller
-    curly braces to enclose bodies of statements. Commonly used to denote the body of a function or a flow controls statement such as a for loop
+* Preprocessor directives which are used to have the compiler execute tasks prior to compiling the source code using directives which are utilized to indicate which namespaces to include in a source code file
+* a function header which consists of a return type, function name, and parameters
+* a function body containing the code that performs the actions required of that function statements that are contained in the C++ source code file
+* comments for documenting the source code for programmers to understand what the code is intended to do
+* a return statement that sends data back to the function caller
+* curly braces to enclose bodies of statements. Commonly used to denote the body of a function or a flow controls statement such as a for loop
 
 C++ source code also permits judicious use of white space (tabs, spaces, new lines) to create code that is easier to read. The compiler completely ignores the white space, with a small exception concerning if statements that will be covered later. It is highly recommended that you make use of white space to indent and separate lines of code to aid in readability of your source code files.
 
@@ -54,17 +52,17 @@ the problem.
 ###C++ Statements
 A C++ program is comprised of various components such as functions, methods, classes, etc. The instructions that form part of a C++ program typically reside inside of functions or methods. These functions are comprised of C++ statements. You will find yourself using various types of statements in your C++ code as listed here:
 
--declarations - these are used to declare variables and constants that will be used in your application
+* declarations - these are used to declare variables and constants that will be used in your application
 
--assignments - these are used to assign values to variables in your application code
+* assignments - these are used to assign values to variables in your application code
 
--preprocessor directives - covered in the topic on Code Formatting
+* preprocessor directives - covered in the topic on Code Formatting
 
--comments - used to document your code
+* comments - used to document your code
 
--function declarations - covered in the topic on Code Formatting
+* function declarations - covered in the topic on Code Formatting
 
--executable statements - these are used to perform operations and execute instructions
+* executable statements - these are used to perform operations and execute instructions
 
 ## Data Types in C++ 
 C++ contains intrinsic data types to store numeric values in your application code. It's important to remember that these values are binary-based and not as flexible as their base 10 counterparts. The range does not exceed 3 billion in either direction.
@@ -75,8 +73,8 @@ Variables are identifiers that you create to hold values or references to object
 
 When you create a variable in C++, you must give it a data type. You can assign a value to the variable at the time you create it or later in your program code. This is known as initializing the variable. Even though you can initialize a variable separate from its creation, you must assign the data type when you define the variable. C++ will not allow you to use an uninitialized variable to help prevent unwanted data from being used in your application. The following code sample demonstrates declaring a variable and assigning a value to it.  C++ supports two methods of initializing a variable.
 
-int myVar = 0;
-int yourVar{0};
+    int myVar = 0;
+    int yourVar{0};
 
 C++ has some restrictions around identifiers that you need to be aware of.
 
@@ -98,26 +96,26 @@ When you declare a constant in C++, you must assign a literal value to that cons
 
 Casting refers to converting one data type to another. Some data conversions are not possible while some are possible but result in data loss. C++ can perform many conversions automatically, what is known as implicit casting or implicit conversion. For example, attempting to convert a smaller data type to larger data type as shown here:
 
-int myInt = 12;
-long myLong;
-myLong = myInt;
+    int myInt = 12;
+    long myLong;
+    myLong = myInt;
 
 In the first line, we declare an integer data type and assign it a value of 12. The next line declares a long data type and in the third line, we assign the integer data type value to the long data type. C++ automatically converts the data type for you. This is known as a widening conversion. Some programmers also call this an expanding assignment. We are expanding or widening the data type to a larger one. In this case, there is no loss in data. The following table highlights some potential data conversion problems.
 
 
 When you want to explicitly perform a conversion or cast, you can use the type cast features of C++. For example, the previous widening conversion in the int to long cast was implicit but you can also tell the compiler that you are know what you are doing by using the type cast statement as in:
 
-long myLong = (long)myInt;
+    long myLong = (long)myInt;
 
-// or you can use this version as well
+    // or you can use this version as well
 
-long myLong = long(myInt);
+    long myLong = long(myInt);
 
 C++ also provides a cast operator that is more restrictive in its usage. This in the form static_cast (type). This static cast operator can be used for converting numeric values or to numeric values. As an example:
 
-char ch;
-int i = 65;
-float f = 2.5;
-double dbl;
-ch = static_cast<char>(i);   // int to char
-dbl = static_cast<double>(f);   // float to double
+    char ch;
+    int i = 65;
+    float f = 2.5;
+    double dbl;
+    ch = static_cast<char>(i);   // int to char
+    dbl = static_cast<double>(f);   // float to double
