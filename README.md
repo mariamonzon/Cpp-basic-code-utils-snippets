@@ -55,9 +55,15 @@ the problem.
 A C++ program is comprised of various components such as functions, methods, classes, etc. The instructions that form part of a C++ program typically reside inside of functions or methods. These functions are comprised of C++ statements. You will find yourself using various types of statements in your C++ code as listed here:
 
 -declarations - these are used to declare variables and constants that will be used in your application
+
 -assignments - these are used to assign values to variables in your application code
+
 -preprocessor directives - covered in the topic on Code Formatting
+
 -comments - used to document your code
+
 -function declarations - covered in the topic on Code Formatting
--executable statements - these are used to perform operations and execute instructions. Examples:
-    be cout << "Hello World!"; which outputs Hello World! to the console.
+
+-executable statements - these are used to perform operations and execute instructions
+
+### Numeric Data
