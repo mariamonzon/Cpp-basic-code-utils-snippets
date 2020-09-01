@@ -3,7 +3,7 @@ And that in itself is a multistep process.
 First a tool called the preprocessor goes through your code and
 manipulates it a little bit. The output of the preprocessor goes
 to something called the compiler.
-As James mentioned, real programs have lots of files in them,
+Real programs have lots of files in them,
 like not just five or ten, but thousands. And each one is compiled
 individually and the output of that is called an object file.
 After everybody's been compiled, then they're linked together
