@@ -175,3 +175,103 @@ The following code example shows how to use a for loop to iterate through an arr
          int number = oldNumbers[i];
          ...
     }
+### Strings
+
+Strings are a series of characters. C++ represents strings in one of two ways. The first maintains backward compatibility with the C language and represents the string as a character array. There is one aspect to a C-style string that is important to note. The last character of every string you store is the null character string, typically represented by the ASCII code for 0 which is \0. This is necessary so that the compiler knows when the string ends. An example demonstrates a C-style string stored in a character array:
+
+    char isAString[6] = { 'H', 'e', 'l', 'l', 'o', '\0'};
+    char isNotAString[5] = { 'H', 'e', 'l', 'l', 'o'};
+    cout << isAString << endl;
+    cout << isNotAString << endl;
+
+The most common mistake made by users of the C-style string is to forget to make the char array large enough to accommodate the \0 character, but also forgetting include the \0. In the previous example, a programmer might think that an array of size 5 would be large enough to contain Hello because that's how many characters are in the word. However, the null character would not be included in the second array, which could result in errors in code that uses this array. The reason is that C++ does not consider the isNotAString array to be a string.
+
+An alternative method of declaring a character array for use as a string is to simply initialize it with a string literal. A string literal is a sequence of characters enclosed in the double quotes ("). For example:
+
+    char isAString[6] = "Hello";
+    char isAnotherString[] = "Array size is inferred";
+
+In the previous example, the first line creates an array of size 6 and assigns the string literal Hello to the array. The second example lets the compiler infer the size from the string literal itself. Note that neither of these two string literals specifies a \0 character. The compiler will implicitly add that for you. However, caution is advised in the first line to ensure that you allow enough room in the array size specified for the null character. If you create an array that is larger than required for the string literal along with the null character, then C++ simply fills the remaining elements of the array with null characters.
+
+__String Class__
+
+If the use of character arrays, single quoted characters, and null termination characters are making you think that strings aren't worth the hassle, consider the string class instead. The ISO/ANSI standard helped to expand the string handling capabilities of C++ by adding the string class.
+
+In order to use the string class, you have to include the string header file. We have not covered namespaces yet but to make typing much easier, you would add a using statement as in the following example.
+
+    using namespace std;
+    string myString = "Hello!";
+    std::string myNewString = "Less typing";
+
+Without the using directive, you would have to type std::string every time you wanted to use the string class in your code, as in the second line above.
+
+### Structures
+
+Arrays can store multiple pieces of data in one compound data type but recall, the data types must all be of the same type. Structures are known as user-defined types. You define the struct by giving it a name and then adding the member data types as in the following example:
+
+    struct coffeeBean
+    {
+         string name;
+         string country;
+         int strength;
+    };
+Recall that in order to use the string data type in our struct, the C++ file that contains the struct must include the string header file. This code snippet also assumes that using namespace std; has also been included.
+Once we have defined the structure, we can then use it in our code the same as any other data type. To use the coffeeBean struct in your code, you simply declare a new variable of that type as shown in this example.
+
+    struct coffeeBean
+    {
+         string name;
+         string country;
+         int strength;
+    };
+
+    coffeeBean myBean = { "Strata", "Colombia", 10 };
+    coffeeBean newBean;
+    newBean.name = "Flora";
+    newBean.country = "Mexico";
+    newBean.strength = 9;
+    cout << "Coffee bean " + newBean.name + " is from " + newBean.country << endl;
+    
+   ### Unions
+   
+   
+Curso Module 2 Data Types in C++ Complex Data Types Unions
+
+Unions
+
+A union, in C++, is similar to a structure in that it can store multiple, disparate data types. The differentiation is that a union can only store one piece of data at a time. What does that signify? It's best represented using an example.
+
+    union numericUnion
+    {
+         int intValue;
+         long longValue;
+         double doubleValue;
+    };
+    numericUnion myUnion;
+    myUnion.intValue = 3;
+    cout << myUnion.intValue << endl;
+    myUnion.doubleValue = 4.5;
+    cout << myUnion.doubleValue << endl;
+    cout << myUnion.intValue; cout << endl;
+
+In this example, we define a union called numericUnion and then create a variable of that type, called myUnion. We first assign the value 3 to the intValue field and then output it. Next we assign the value 4.5 to the doubleValue field and output that. The example shows how the union works when on the second to last line, we try to output the value for intValue again. In the output, it results in 0 rather than 3. The reason is that once we assign a value to doubleValue, what was contained in intValue is lost. The union can only store a value in one of its fields at a time.
+For instance, Unions can be used represent a numeric and a string data type internally but only assign the proper data type based on the part number.
+
+### Enumerations
+
+In the topics on variables and constants, it was noted that anytime you want to create a value for use in a program, where the value should never change, you used a constant. An enumeration can be considered a way to create what are known as symbolic constants. The most common example is to use an enum to define the day of the week. There are only seven possible values for days of the week, and you can be reasonably certain that these values will never change.
+
+To create an enum, you declare it in your code file with the following syntax, which demonstrates creating an enum called Day, that contains the days of the week:
+
+    enum Day { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+
+By default enum values start at 0 and each successive member is increased by a value of 1. You can change the default by specifying a starting value for your enum as in the following example.
+
+    enum Day { Sunday = 1, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+    payDay = Thursday;
+    cout << payDay << endl;
+
+The first line defines the enumeration Day and assigns seven values to the enum. Sunday is listed as the first day of the week and is initialized with the value one.
+The second line declares a new variable called payDay which is of the Day enum type. In the third line, payDay is assigned a value from the list of values, in this case Thursday. Finally, the last line outputs the value of payDay (5) to the console window. Internally, the constants in the enum are used as numbers and not as the textual representation you assign to them.
+
+
