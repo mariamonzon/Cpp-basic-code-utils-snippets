@@ -13,3 +13,39 @@ C++ is a case sensitive language. Case sensitivity means that your keywords and 
     curly braces to enclose bodies of statements. Commonly used to denote the body of a function or a flow controls statement such as a for loop
 
 C++ source code also permits judicious use of white space (tabs, spaces, new lines) to create code that is easier to read. The compiler completely ignores the white space, with a small exception concerning if statements that will be covered later. It is highly recommended that you make use of white space to indent and separate lines of code to aid in readability of your source code files.
+
+## Cpp Compilation Basics
+
+The code is built as a multistep process.
+
+First a tool called the preprocessor goes through your code and
+manipulates it a little bit. The output of the preprocessor goes
+to something called the compiler.
+Real programs have lots of files in them,
+like not just five or ten, but thousands. And each one is compiled
+individually and the output of that is called an object file.
+
+After everybody's been compiled, then they're linked together
+into your actual executable, the thing that you run under the
+debugger or without the debugger.
+Now, when you're writing these individual files, the compiler
+makes sure that you've used the syntax of the library correctly.
+For example, the single line of useful code in there had quite
+a lot of syntax. It had bits and pieces of punctuation that you
+will understand by the time we're done. And the compiler makes
+sure that all that punctuation is being used properly.
+It doesn't necessarily check every single thing about your program.
+You are allowed to basically make a promise to the compiler.
+I'd like to call this piece of code that I swear to you will
+be somewhere else.
+
+The linker makes sure that those promises are being kept.
+And it puts all the somewhere elses together and connects everybody
+to the places they were planning to use and, okay, this is good,
+it all works.
+
+Those three steps of building are actually critical to understanding
+what happens when you get error messages.
+In C++ you're told whether the error is a compiler
+error or a linker error. And that's vital to being able to solve
+the problem.
