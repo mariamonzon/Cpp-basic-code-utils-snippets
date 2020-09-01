@@ -279,7 +279,9 @@ The second line declares a new variable called payDay which is of the Day enum t
 Operators are used to perform operations on variables and values. Comparison operators determine if values are equal, greater, or less than each other.  C++ also allows you to use mathematical operators for incrementing values to help control the number of iterations in a loop.  You can also make use of bitwise operators to speed up some operations in your code. 
 ### Decision Structures
 C++ decision structures provide logic in your application code that allows the execution of different sections of code depending on the state of data in the application. You might ask users whether they wish to save any changes to a file that is open in the application. The decision structure permits you to code behavior to execute based on the answer provided by the user. C++ uses conditional statements to achieve this functionality.
+
 __if__:  are concerned with Boolean logic. If the statement is true, the block of code associated with the if statement is executed.  char response = 'y';
+
     if (response == 'y' || response == 'Y')
     {
         cout << "Positive response received" << endl;
@@ -294,18 +296,24 @@ __if__:  are concerned with Boolean logic. If the statement is true, the block o
     }
  
  __switch__: If there are too many else if statements, code can become messy and difficult to follow. In this scenario, a better solution is to use a switch statement. The switch statement simply replaces multiple else if statements. The following sample shows how you can use a switch statement to replace a collection of else if clauses.
-char response = 'y';
-switch (response)
-    {
-       case 'y':
-          // Block of code executes if the value of response is y.
-          break;
-       case 'Y':
-          // Block of code executes if the value of response is Y.
-          break;
-       case 'n':
-          // Block of code executes if the value of response is n.
-          break;
-       default:
-          // Block executes if none of the above conditions are met
-    }
+switch statements support the following data types as expressions:
+*   intrinsic data types such as int or char
+*   enumerations
+
+        char response = 'y';
+        switch (response)
+            {
+               case 'y':
+                  // Block of code executes if the value of response is y.
+                  break;
+               case 'Y':
+                  // Block of code executes if the value of response is Y.
+                  break;
+               case 'n':
+                  // Block of code executes if the value of response is n.
+                  break;
+               default:
+                  // Block executes if none of the above conditions are met
+            }
+
+
