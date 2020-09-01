@@ -1,5 +1,6 @@
-# Cpp-Basics
+# C++ Notes
 
+## C++ Fundamentals
 
 C++ is a case sensitive language. Case sensitivity means that your keywords and variable declarations must match the case. Aside from the case sensitivity, C++ also has a defined outline for program code and specific "elements" found in a typical C++ application. These elements consist of:
 
@@ -14,7 +15,7 @@ C++ is a case sensitive language. Case sensitivity means that your keywords and 
 
 C++ source code also permits judicious use of white space (tabs, spaces, new lines) to create code that is easier to read. The compiler completely ignores the white space, with a small exception concerning if statements that will be covered later. It is highly recommended that you make use of white space to indent and separate lines of code to aid in readability of your source code files.
 
-## Cpp Compilation Basics
+### Cpp Compilation Basics
 
 The code is built as a multistep process.
 
@@ -49,3 +50,14 @@ what happens when you get error messages.
 In C++ you're told whether the error is a compiler
 error or a linker error. And that's vital to being able to solve
 the problem.
+
+###C++ Statements
+A C++ program is comprised of various components such as functions, methods, classes, etc. The instructions that form part of a C++ program typically reside inside of functions or methods. These functions are comprised of C++ statements. You will find yourself using various types of statements in your C++ code as listed here:
+
+-declarations - these are used to declare variables and constants that will be used in your application
+-assignments - these are used to assign values to variables in your application code
+-preprocessor directives - covered in the topic on Code Formatting
+-comments - used to document your code
+-function declarations - covered in the topic on Code Formatting
+-executable statements - these are used to perform operations and execute instructions. Examples:
+    be cout << "Hello World!"; which outputs Hello World! to the console.
