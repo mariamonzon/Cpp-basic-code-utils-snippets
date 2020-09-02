@@ -348,3 +348,43 @@ string response;
          // Process the data.
 
     } while (response != "Quit");
+ 
+ ## C++ Functions
+ 
+ Functions are a component of a programming language that permit you to break down the behavior of an application into discreet pieces of functionality, hence the name function.  
+ A function is essentially a block of C++ code that you give a name and then call from other locations in your application, when you want the computer to perform the instructions contained in that function.
+ Functions can also be overload.   This refers to the practice of using the same function name to refer to multiple functions that perform different actions. The compiler will know which function to call, based on the number of arguments passed in.
+
+    int Sum(int x, int y)
+    {
+         return x + y;
+    }
+
+    int Sum(int x, int y, int z)
+    {
+         return x + y + z;
+    }
+ A function can accept values that will be used in the statements in the function body.  These values are known as arguments when passed to a function.  The arguments are passed into parameters.  Parameters are the placeholders that are found inside the parentheses of a function declaration .When calling the function, you use the function name, followed by an open parenthesis, the arguments that will be passed into the parameters, and then a closing parenthesis:
+    
+    int result = Sum(2, 3);
+    
+ ### Function Prototypes
+ 
+When declaring a function, you specify its storage class, return type, name, and parameters.  Some refer to this as the function signature.  In C++ it is also called a function prototype. In C++, function prototypes belong in header files. 
+
+### Inline Functions
+
+One of the goals for using functions in your code is to create discrete pieces of functionality in your code that is easier to test and maintain.  However, functions also have an impact on application performance.  The reason for this impact results from the operations that must be performed when a function is called. 
+This avoids the overhead of making a function call because the contents of the function body are now located at the point where the functionality is required.   Note a couple of points about inline functions:
+
+*    the inline keyword is a compiler directive that is a recommendation only.  The compiler may ignore your request and compile the function normally resulting in function calls anyway.
+*    if you are using inline functions and change the function in anyway, the code needs to be recompiled because the code for that function will need to be updated in each location it was used.
+*    use inline functions only for small functions that are used frequently, not for large functions.
+
+    inline void swap(int & a, int & b)
+    {
+         int temp = a;
+         a = b;
+         b = temp;
+    }
+ ## Objects and Classes
