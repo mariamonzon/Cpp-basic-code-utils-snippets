@@ -264,10 +264,6 @@ Once we have defined the structure, we can then use it in our code the same as a
     
    ### Unions
    
-   
-Curso Module 2 Data Types in C++ Complex Data Types Unions
-
-Unions
 
 A union, in C++, is similar to a structure in that it can store multiple, disparate data types. The differentiation is that a union can only store one piece of data at a time. What does that signify? It's best represented using an example.
 
@@ -306,7 +302,7 @@ The second line declares a new variable called payDay which is of the Day enum t
 
 ## C++  Control statements
 ### Operators
-Operators [https://www.tutorialspoint.com/cplusplus/cpp_operators.html] are used to perform operations on variables and values. Comparison operators determine if values are equal, greater, or less than each other.  C++ also allows you to use mathematical operators for incrementing values to help control the number of iterations in a loop.  You can also make use of bitwise operators to speed up some operations in your code. 
+[Operators] (https://www.tutorialspoint.com/cplusplus/cpp_operators.html) are used to perform operations on variables and values. Comparison operators determine if values are equal, greater, or less than each other.  C++ also allows you to use mathematical operators for incrementing values to help control the number of iterations in a loop.  You can also make use of bitwise operators to speed up some operations in your code. 
 ### Decision Structures
 C++ decision structures provide logic in your application code that allows the execution of different sections of code depending on the state of data in the application. You might ask users whether they wish to save any changes to a file that is open in the application. The decision structure permits you to code behavior to execute based on the answer provided by the user. C++ uses conditional statements to achieve this functionality.
 
