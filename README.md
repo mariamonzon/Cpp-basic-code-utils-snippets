@@ -344,15 +344,15 @@ switch statements support the following data types as expressions:
    ### Repetition Statements
 The ability to repeat a series of statements is a core requirement of most application code. C++ provides a number of standard constructs known as loops that you can use to implement iteration logic: for loops, while loops, and do loops. Nesting of loops is possible in C++.  The most common is to nest for loops.
 * The for loop executes a block of code repeatedly until the specified expression evaluates to false. You can define a for loop as follows.
-´´´
+```
 for ([initializer(s)]; [condition]; [iterator])
 {
    // code to repeat goes here
 }
-´´´
-* A while loop enables you to execute a block of code while a given condition is true
+```
 
-´´´
+* A while loop enables you to execute a block of code while a given condition is true
+```
 string response;
 cout << "Enter menu choice " << endl << "More" << endl << "Quit" << endl;
 cin >> response;
@@ -364,18 +364,19 @@ while (response != "Quit")
     cout << "Enter menu choice " << endl << "More" << endl << "Quit" << endl;
     cin >> response;
 }
-´´´
+```
 
 * A do loop, sometimes also referred to as a do...while loop, is very similar to a while loop, with the exception that a do loop will always execute the body of the loop at least once.
-´´´
-    string response;
-    do
-    {        
-         cout << "Enter menu choice " << endl << "More" << endl << "Quit" << endl;
-         cin >> response;
-         // Process the data.
-    } while (response != "Quit");
- ´´´
+
+```
+string response;
+do
+{        
+     cout << "Enter menu choice " << endl << "More" << endl << "Quit" << endl;
+     cin >> response;
+     // Process the data.
+} while (response != "Quit");
+```
  
  ## C++ Functions
  
