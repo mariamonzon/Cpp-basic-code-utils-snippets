@@ -32,22 +32,39 @@ float sine(float o, float h){
     return x;
 }
 
+float avg(int array[], int size) {
+    int i, sum = 0;       
+    for (i = 0; i < size; ++i)
+     {
+         sum += array[i];
+      }
+     return float(sum) / size;
+}
+
+
 int main() {
 // Functions calls
-int b, int ex; 
-
-cout<<"Enter base: "<<endl;
-cin>>b
- cout<<"Enter exponent: "<<endl;
-cin>>ex
-int x = pow(b,ex);
-if (x =! -1)
-     cout<<"The power value  is "<< x<<endl;
-   
-cout<<"Enter hypotenuse length: "<<endl;
-cin>>b
- cout<<"Enter opposite length : "<<endl;
-cin>>ex
+  int b, int ex; 
+  int arr[6] = {1, 2, 3, 7, 9, 5};
+  float m;
   
-float s = sine(ex,b);
-cout<<"The sine value  is "<< s<< endl;
+  cout<<"Enter base: "<<endl;
+  cin>>b
+   cout<<"Enter exponent: "<<endl;
+  cin>>ex
+  int x = pow(b,ex);
+  if (x =! -1)
+       cout<<"The power value  is "<< x<<endl;
+
+  cout<<"Enter hypotenuse length: "<<endl;
+  cin>>b
+   cout<<"Enter opposite length : "<<endl;
+  cin>>ex
+
+  float s = sine(ex,b);
+  cout<<"The sine value  is "<< s<< endl;
+  
+  m = getAverage( arr, 6 ) ;
+  cout << "Average value is: " << m << endl; 
+  return 0;
+}
