@@ -49,21 +49,19 @@ In C++ you're told whether the error is a compiler
 error or a linker error. And that's vital to being able to solve
 the problem.
 
+    $ g++ main.cpp
+    $ ./a.out
+   
+
 ### C++ Statements
 A C++ program is comprised of various components such as functions, methods, classes, etc. The instructions that form part of a C++ program typically reside inside of functions or methods. These functions are comprised of C++ statements. You will find yourself using various types of statements in your C++ code as listed here:
 
 * declarations - these are used to declare variables and constants that will be used in your application
-
 * assignments - these are used to assign values to variables in your application code
-
 * preprocessor directives - covered in the topic on Code Formatting
-
 * comments - used to document your code
-
 * function declarations - covered in the topic on Code Formatting
-
 * executable statements - these are used to perform operations and execute instructions
-
 
 When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what a class, object, methods, and instant variables mean.
 
@@ -71,6 +69,7 @@ When we consider a C++ program, it can be defined as a collection of objects tha
 * Class − A class can be defined as a template/blueprint that describes the behaviors/states that object of its type support.
 * Methods − A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.
 * Instance Variables − Each object has its unique set of instance variables. An object's state is created by the values assigned to these instance variables.
+
 
 ## Data Types in C++ 
 C++ contains intrinsic data types to store numeric values in your application code. It's important to remember that these values are binary-based and not as flexible as their base 10 counterparts. The range does not exceed 3 billion in either direction.
@@ -92,6 +91,30 @@ Identifiers can only contain letters (in any case), digits, and the underscore c
 
 C++ has a set of reserved keywords that the language uses. You cannot use these keywords as an identifier in your code. You may choose to take advantage of the case-sensitivity of C++ and use Long as an identifier to distinguish it from the reserved keyword long, but that is not a recommended approach.
 
+#### Pointers
+
+Some C++ tasks are performed more easily with pointers, and other C++ tasks, such as dynamic memory allocation, cannot be performed without them.
+As you know every variable is a memory location and every memory location has its address defined which can be accessed using ampersand (&) operator which denotes an address in memory. 
+A pointer is a variable whose value is the address of another variable. Like any variable or constant, you must declare a pointer before you can work with it. The general form of a pointer variable declaration is: ´type  *var-name;´
+1 	Null Pointers: C++ supports null pointer, which is a constant with a value of zero defined in several standard libraries.
+2 	Pointer Arithmetic: There are four arithmetic operators that can be used on pointers: ++, --, +, -
+3 	Pointers vs Arrays: There is a close relationship between pointers and arrays.
+4 	Array of Pointers: You can define arrays to hold a number of pointers.
+5 	Pointer to Pointer: C++ allows you to have pointer on a pointer and so on.
+6 	Passing Pointers to Functions: Passing an argument by reference or by address both enable the passed argument to be changed in the calling function by the called function.
+7 	Return Pointer from Functions: C++ allows a function to return a pointer to local variable, static variable and dynamically allocated memory as well.
+
+#### References
+A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable. You can then think of a reference as a second label attached to that memory location. Therefore, you can access the contents of the variable through either the original variable name or the reference
+    
+    int i = 17;
+    int& r = i;
+
+References are often confused with pointers but three major differences between references and pointers are:
+* You cannot have NULL references. You must always be able to assume that a reference is connected to a legitimate piece of storage.
+* Once a reference is initialized to an object, it cannot be changed to refer to another object. Pointers can be pointed to another object at any time.
+* A reference must be initialized when it is created. Pointers can be initialized at any time.
+
 ### Constants
 
 Similar to a variable, a constant expression is a named memory location for a value used in your application.  The difference is that, as you might expect, a constant expression cannot have its value change in the program during run time.  C++ uses the keyword const to indicate that an expression is a constant.
@@ -100,7 +123,6 @@ When you declare a constant in C++, you must assign a literal value to that cons
 
 
 ### Casting
-
 
 Casting refers to converting one data type to another. Some data conversions are not possible while some are possible but result in data loss. C++ can perform many conversions automatically, what is known as implicit casting or implicit conversion. For example, attempting to convert a smaller data type to larger data type as shown here:
 
@@ -284,7 +306,7 @@ The second line declares a new variable called payDay which is of the Day enum t
 
 ## C++  Control statements
 ### Operators
-Operators are used to perform operations on variables and values. Comparison operators determine if values are equal, greater, or less than each other.  C++ also allows you to use mathematical operators for incrementing values to help control the number of iterations in a loop.  You can also make use of bitwise operators to speed up some operations in your code. 
+Operators [https://www.tutorialspoint.com/cplusplus/cpp_operators.html] are used to perform operations on variables and values. Comparison operators determine if values are equal, greater, or less than each other.  C++ also allows you to use mathematical operators for incrementing values to help control the number of iterations in a loop.  You can also make use of bitwise operators to speed up some operations in your code. 
 ### Decision Structures
 C++ decision structures provide logic in your application code that allows the execution of different sections of code depending on the state of data in the application. You might ask users whether they wish to save any changes to a file that is open in the application. The decision structure permits you to code behavior to execute based on the answer provided by the user. C++ uses conditional statements to achieve this functionality.
 
