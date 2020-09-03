@@ -426,7 +426,37 @@ You can initialize the member variables by using the dot operator and setting th
   
        void f()
         {
-        Rectangle rect{}; // Initialize to defaulf values rect._width = 0;   rect._height = 0;
-         Rectangle outer{5,3};
+        Rectangle rect{};           // Initialize to defaulf values rect._width = 0;   rect._height = 0;
+        Rectangle outer{5,3};
         };
+        
+### Encapsulation
+Often considered the first pillar of object-oriented programming, encapsulation can be used to describe the accessibility of the members belonging to a class.  C++ provides access modifiers and properties to help implement encapsulation in your classes.  While some consider this accessibility configuration to be the only aspect of encapsulation, others also define encapsulation as the act of including all data and behavior required of the class, within the class definition. 
+
+    //Declaring a Class
+    class Rectangle
+    {
+        private:
+            int _width;
+            int _height;
+            
+        public:
+            // Default Constructor 
+            // Rectangle(): _width{}, _height{}
+            // {}
+            //  Constructor 
+            Rectangle(int initial_width, int initial_height): _width{int initial_width}, _height{int initial_height}
+            {}
+            int get_width() {return _width; }
+            int get_height(){return _height;  }
+            void resize(int  new_width, int  new_height) 
+                {
+                _width =  new_width  ; 
+                _height =  new_height; 
+                }
+            int get_area() 
+                {
+                return _width * _height  ; 
+                }
+    };
     
