@@ -64,6 +64,14 @@ A C++ program is comprised of various components such as functions, methods, cla
 
 * executable statements - these are used to perform operations and execute instructions
 
+
+When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what a class, object, methods, and instant variables mean.
+
+* Object − Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors - wagging, barking, eating. An object is an instance of a class.
+* Class − A class can be defined as a template/blueprint that describes the behaviors/states that object of its type support.
+* Methods − A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.
+* Instance Variables − Each object has its unique set of instance variables. An object's state is created by the values assigned to these instance variables.
+
 ## Data Types in C++ 
 C++ contains intrinsic data types to store numeric values in your application code. It's important to remember that these values are binary-based and not as flexible as their base 10 counterparts. The range does not exceed 3 billion in either direction.
 
