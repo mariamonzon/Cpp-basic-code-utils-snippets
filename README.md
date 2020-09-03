@@ -388,3 +388,45 @@ This avoids the overhead of making a function call because the contents of the f
          b = temp;
     }
  ## Objects and Classes
+Classes enable you to create your own custom, self-contained, and reusable types. A class file is often considered a blueprint for objects that you use in your code.  
+
+### Create Classes
+
+Suppose you create a class to represent a rectangle shape in your program.  You use the class keyword to declare a class.  Note that they are accessible directly because they are public, as a result of the public: modifier.
+
+    //Declaring a Class
+    class Rectangle
+    {
+    public:
+        int _width;
+        int _height;
+    };
+    
+
+ ### Using a class
+ we can use declared classes in our code to create instances of a class in our program.  It is known as a rectangle object and will be given a unique name. Using what is known as "dot notation" or the dot operator, we provide values for the propierties of the object. 
+
+    void main()
+    {
+     Rectangle outer;
+     Rectangle inner;    
+
+     outer._width = 10;
+     outer._height = 10;
+
+     inner._width = 5;
+     inner._height = 5;
+    } 
+    
+### Class Initialization
+Initialization is an important part of working with your classes in C++.  
+Even when using intrinsic data types, if you do not initialize the variable for that type and you access it in your code, you will end up with whatever values are stored in the memory location that the variable refers to.  
+This is something  to avoid. C++ offers a couple of options for initializing your classes.  
+You can initialize the member variables by using the dot operator and setting the values explicitly or you can include a constructor in your class that is responsible for initialization the member variables
+  
+       void f()
+        {
+        Rectangle rect{}; // Initialize to defaulf values rect._width = 0;   rect._height = 0;
+         Rectangle outer{5,3};
+        };
+    
