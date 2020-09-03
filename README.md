@@ -396,15 +396,15 @@ Classes enable you to create your own custom, self-contained, and reusable types
 Suppose you create a class to represent a rectangle shape in your program.  You use the `class` keyword to declare a class. 
 The public keyword is an access specifier, which specifies that members (attributes and methods) of the class are accessible from outside the class. 
 Note that they are accessible directly because they are public but can also be private. 
-    ``` c++
-    //Declaring a Class
-    class Rectangle
-    {
-    public:
-        int _width;
-        int _height;
-    };
-    ```
+```c++
+//Declaring a Class
+class Rectangle
+{
+public:
+    int _width;
+    int _height;
+};
+```
     
  #### Class Objects
  In C++, an object is created from a class. We can use declared classes in our code to create instances of a class in our program.   It is known as an object and will be given a unique name. Using what is known as "dot notation" or the dot operator, we provide values for the propierties of the object. 
