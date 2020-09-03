@@ -435,7 +435,7 @@ You can initialize the member variables by using the dot operator and setting th
         
 #### Encapsulation
 Often considered the first pillar of object-oriented programming, encapsulation can be used to describe the accessibility of the members belonging to a class.  C++ provides access modifiers and properties to help implement encapsulation in your classes.  While some consider this accessibility configuration to be the only aspect of encapsulation, others also define encapsulation as the act of including all data and behavior required of the class, within the class definition. 
-
+```c++
     //Declaring a Class
     class Rectangle
     {
@@ -462,7 +462,30 @@ Often considered the first pillar of object-oriented programming, encapsulation 
                 return _width * _height  ; 
                 }
     };
-   
+```
+
 ### Const Objects 
 
-Recall that the keyword const was used to indicate that a data type you use in your code is a constant and cannot have its value changed during application runtime.  Objects in your code can also make use of the const keyword to indicate that the objects are immutable.  Immutable simply means that they cannot change.
+Recall that the keyword const was used to indicate that a data type you use in your code is a constant and cannot have its value changed during application runtime.  Objects in your code can also make use of the const keyword to indicate that the objects are immutable.  Immutable simply means that they cannot change. "get" methods in a const object should be declared with the const keyword. 
+
+```c++
+ 
+    class Rectangle
+    {
+        private:
+            int _width;
+            int _height;
+        
+        public:
+            Rectangle(): _width{1}, _height{1}
+            {}
+            Rectangle(int initial_width, int initial_height): _width{int initial_width}, _height{int initial_height}
+            {}
+            int get_width() const {return _width; }
+            int get_height() const  {return _height;  }
+            int get_area() const
+                {
+                return _width * _height  ; 
+                }
+    };
+```
