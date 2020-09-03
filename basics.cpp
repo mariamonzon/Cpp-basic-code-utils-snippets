@@ -2,10 +2,9 @@
 #include <iostream>
 using namespace std;
 
-int hello_world()
+void hello_world()
 {
   std::cout << "Hello World!";
-  return 0;
 }
 
 
