@@ -387,13 +387,16 @@ This avoids the overhead of making a function call because the contents of the f
          a = b;
          b = temp;
     }
- ## Objects and Classes
-Classes enable you to create your own custom, self-contained, and reusable types. A class file is often considered a blueprint for objects that you use in your code.  
 
-### Create Classes
+## Objects and Classes
+###  C++ Classes
+Classes enable you to create your own custom, self-contained, and reusable types. A class file is often considered a blueprint for objects that you use in your code. 
 
-Suppose you create a class to represent a rectangle shape in your program.  You use the class keyword to declare a class.  Note that they are accessible directly because they are public, as a result of the public: modifier.
-
+####  Classes Creation
+Suppose you create a class to represent a rectangle shape in your program.  You use the `class` keyword to declare a class. 
+The public keyword is an access specifier, which specifies that members (attributes and methods) of the class are accessible from outside the class. 
+Note that they are accessible directly because they are public but can also be private. 
+    ``` c++
     //Declaring a Class
     class Rectangle
     {
@@ -401,10 +404,10 @@ Suppose you create a class to represent a rectangle shape in your program.  You 
         int _width;
         int _height;
     };
+    ```
     
-
- ### Using a class
- we can use declared classes in our code to create instances of a class in our program.  It is known as a rectangle object and will be given a unique name. Using what is known as "dot notation" or the dot operator, we provide values for the propierties of the object. 
+ #### Class Objects
+ In C++, an object is created from a class. We can use declared classes in our code to create instances of a class in our program.   It is known as an object and will be given a unique name. Using what is known as "dot notation" or the dot operator, we provide values for the propierties of the object. 
 
     void main()
     {
@@ -417,8 +420,8 @@ Suppose you create a class to represent a rectangle shape in your program.  You 
      inner._width = 5;
      inner._height = 5;
     } 
-    
-### Class Initialization
+   
+####  Class Initialization
 Initialization is an important part of working with your classes in C++.  
 Even when using intrinsic data types, if you do not initialize the variable for that type and you access it in your code, you will end up with whatever values are stored in the memory location that the variable refers to.  
 This is something  to avoid. C++ offers a couple of options for initializing your classes.  
@@ -430,7 +433,7 @@ You can initialize the member variables by using the dot operator and setting th
         Rectangle outer{5,3};
         };
         
-### Encapsulation
+#### Encapsulation
 Often considered the first pillar of object-oriented programming, encapsulation can be used to describe the accessibility of the members belonging to a class.  C++ provides access modifiers and properties to help implement encapsulation in your classes.  While some consider this accessibility configuration to be the only aspect of encapsulation, others also define encapsulation as the act of including all data and behavior required of the class, within the class definition. 
 
     //Declaring a Class
@@ -459,4 +462,7 @@ Often considered the first pillar of object-oriented programming, encapsulation 
                 return _width * _height  ; 
                 }
     };
-    
+   
+### Const Objects 
+
+Recall that the keyword const was used to indicate that a data type you use in your code is a constant and cannot have its value changed during application runtime.  Objects in your code can also make use of the const keyword to indicate that the objects are immutable.  Immutable simply means that they cannot change.
