@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define TAMMAX 50
+
+
+void menu();
+struct stand;
+void tarifa(tpabellon pabellon[5]);
+
+int main(void) {
+    tarifa(tpabellon pabellon[5]);
+    menu();
+    
+    return (0);
+}
+
+void menu(){
+    int option;
+    tarifa(tarifa);
+            
+    printf("1.-Añadir un stand");
+    printf("2.-Eliminar un stand");
+    printf("3.-Modificar la tarifa de un pabellon");
+    printf("4.-Visualizar la informacion de los stands y pabellones");
+    printf("5.-Salir del programa");
+    
+    printf("Escoja una opcion");
+    do{
+        switch(option){
+            case 1: informacion();
+                
+            case 2: 
+                
+                break;
+            case 3: 
+                break;
+            case 4:
+                break;
+            case 5:
+                printf("Salir");
+                break;
+               
+        }
+    }while (option>1||option<4);
+}
+struct stand{
+    char nombre [TAMMAX];
+    int numero;
+    int dias;
+    float metros;
+    float total_alquiler;
+}empresa[TAMMAX];
+
+typedef struct pabellon{
+    float tarifa;
+    float metros;
+} tpabellon;
+
+void informacion(){
+    int  i;
+    
+    printf("introduzca el numero de stands:");
+    scanf("%d", &stand);
+    for(i=0;i<stand;i++){
+    printf("Introduzca el nombre del stand");
+    gets(empresa[i].nombre);
+    printf("Introduzca el numero del stand");
+    scanf("%d", &empresa[i].numero);
+    printf("Introduzca el numero de dias");
+    scanf("%d", &empresa[i].dias);
+    printf("Introduzca los metros cuadrados");
+    scanf("%f", &empresa[i].metros);
+    
+    empresa[i].total_alquiler = totalalquiler(empresa , pabellon[i], i);
+    
+    }
+    
+}
+void tarifa(tpabellon pabellon[5]){
+    int i;
+    for(i=0; i<5; i++){
+        printf("Introduzca de cada pabellon: ");
+        scanf("%f", &pabellon[i].tarifa);
+    }
+}
+int totalalquiler(struct stand *empresa, struct pabellon[], int i){
+  int total;
+  total =empresa[i].dias * pabellon[i].tarifa ;
+    
+ return total;
+}

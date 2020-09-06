@@ -1,0 +1,49 @@
+/* 
+ * File:   main.c
+ * Author: alumno
+ *
+ * Created on 24 de noviembre de 2014, 8:03
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int DNI(char *dni, int longitud);
+int comprobar( char *dni, int longitud);
+
+int main(void){
+    int longitud, letra;
+    char dni[8]={0};
+    char resto [23]={'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F','P', 'D', 'X', 'B',  'N', 'J', 'Z','S', 'Q', 'V', 'H', 'L', 'C', 'K','E'};
+    do{
+    printf("Introduzca su DNI: ");
+    gets(dni);
+    longitud= strlen(dni);
+    }while(comprobar(dni, longitud));
+    letra=DNI(dni, longitud);
+    printf("%c", resto[letra]);
+  
+}
+int DNI(char *dni, int longitud){
+    int DNI,i, letra;
+	for(i=0; i<longitud;i++)
+	printf("%c", dni[i]);
+    	scanf("%d", &DNI);
+    	letra= DNI%23;
+   return letra;     
+}
+int comprobar( char *dni, int longitud){
+    int i, boolean;
+    if (dni[2]==0){
+        boolean=0;
+    }else {
+        for (i=0; i<longitud && longitud>5; i++){
+            if (dni[i]<'0'||dni[i]<'9')
+                boolean=0;
+            else 
+                boolean=1;
+        }
+    }
+    
+return boolean;
+}
