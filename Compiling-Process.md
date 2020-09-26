@@ -84,3 +84,11 @@ CMake reads the project configuration (path to header files and libraries) from 
     # Now we can use this macro to compile many C++ files.
     add_example(myCode1)
     add_example(myCode2)
+
+### Compile commands
+
+    cd build
+    cmake ..
+    cmake -G "Visual Studio 16 2019" ..
+
+    cmake --build . --config Release
