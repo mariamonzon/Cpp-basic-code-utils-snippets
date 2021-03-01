@@ -7,6 +7,19 @@ void hello_world()
   std::cout << "Hello World!";
 }
 
+void datatypes(){
+    int i; 
+    char ch;
+    double d;
+    long l;
+    float f; 
+
+    // Read the input value consists of the following space-separated values: 
+    // int, long, char, float, and double
+    scanf("%d %ld %c %f %lf", &i, &l, &ch, &f, &d);
+   // print in each line the datas
+    printf("%d\n%ld\n%c\n%f\n%lf", i, l, ch, f, d);
+}
 
 int pow(int base, int expo){
     int x = base;
